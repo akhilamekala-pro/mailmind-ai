@@ -1,4 +1,3 @@
-
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -72,8 +71,6 @@ app.post("/api/ai", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("MailMind Backend running on http://localhost:5000");
+app.listen(process.env.PORT || 5000, () => {
+  console.log("MailMind Backend running");
 });
-
-
